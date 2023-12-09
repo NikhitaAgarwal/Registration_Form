@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css" type="text/css"/>
+    <title>Registration Form</title>
+</head>
+<body>
+ <div class="container">
+    <form action="" method="" id="form">
+        <div class="main">
+            <h2>Registration</h2>
+            <div class="user_deatils">
+            <label for="user">Full Name:&nbsp;</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="user_deatils">
+            <label for="user">User Name:&nbsp;</label>
+            <input type="text" id="username"  placeholder="User Name" required>
+            </div>
+            <div class="user_deatils">
+            <label for="user">Email_Id:&nbsp;</label>
+            <input type="email" id="email"  placeholder="abc@gmail.com" required>
+            </div>
+            <div class="user_deatils">
+            <label for="user">Phone Number:&nbsp;</label>
+            <input type="text" id="phoneno" maxlength="10"  pattern="[6789][0-9]{9}" placeholder="Enter valid phone number" title="Enter valid phone number" required>
+            </div>
+            <div class="user_deatils">
+                <label for="user">Password:&nbsp;</label>
+                <input type="password" id="password"  placeholder="Enter Password" maxlength="8">
+                </div>
+            <div class="user_deatils">
+            <label>Gender:&nbsp; </label>   <input type="radio" name="gender" id="Male">Male<input type="radio" name="gender" id="Female">Female<input type="radio" name="gender" id="Other">Other
+            </div>
+            
+            <button type="submit" id="Submit" class="Submit"  >Register</button>
+             <div class="popup" id="Popup">
+                <img src="">
+                <h2>Thank You!</h2>
+                <p>Your details has been succesfully submitted. Thanks</p>
+                <button type="button" onclick="ClosePopup()">OK</button>
+            </div> 
+
+        </div>
+   
+    </form>
+ </div>
+ <script>
+    
+
+   
+window.addEventListener('load', function() {
+     const inputField = document.getElementById('name');
+     const inputField1 = document.getElementById('username');
+     const inputField2 = document.getElementById('email');
+     const inputField4 = document.getElementById('password');
+     const inputField3 = document.getElementById('phoneno');
+
+     const submitButton = document.getElementById('Submit');
+     inputField.value='';
+     inputField1.value='';
+     inputField2.value='';
+     inputField3.value='';
+    
+ });
+
+   
+    let popup=document.getElementById("Popup");
+
+    function OpenPopup(){
+        popup.classList.add("open-popup");
+    }
+
+    function ClosePopup(){
+        popup.classList.remove("open-popup");
+
+    }
+ </script> 
+</body>
+</html>
